@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+}
+
+.wholepage-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.stickytop {
+ position: sticky;
+ top: 0;
+ border: 5px solid red;
+ list-style-type: none;
+ /*height: 60px; --- will be used later*/
+  /*margin: 5px; */
+ padding: 0;
+ justify-content: space-around; /*makes space btw top divs - spacebtw puts the two at extreme edge on left and right--so no used.*/
+ align-items: center; /*centers the two divs to same position*/
+ display: flex;
+  /*overflow:hidden */
+}
+
+.headerlog div {
+  /*border: 5px solid #3882F6; */
+ list-style-type: none;
+ margin: 5px;
+ padding: 0;
+ overflow:hidden /*prevents texts from continuing outside list*/
+ 
+}
+
+.headerlog a {
+  text-decoration: none;
+  color: rgb(88, 76, 76);
+  font-size: 28px;
+  font-weight: bold;
+}
+#bottomheadlog a {
+  font-weight: 100;
+}
+.headerlog a:hover {
+ background-color: darkred;
+}
+
+
+
+.navtopright #unwholelist {
+  list-style-type: none;
+  display: flex;
+  gap: 10px          /*creates margin between the links*/
+}
+
+
+.navtopright li a {
+/* border: 5px solid blue; using to show blocks around elements*/
+ font-size: 20px;
+ text-align: center;
+ padding: 10px; 
+ color: black;
+ text-decoration: none;
+ font-weight: normal;
+}
+
+
+
+ #partners a:hover {
+  text-decoration: none;
+  color: rebeccapurple;
+  background-color: white;
+  border: none;
+}
+#insideservice {
+  display: none;
+}
+
+#services:hover #insideservice  {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: yellow;
+  list-style-type: none;
+  margin: 0;
+}
+ 
+
+.rightmost {
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #db880b;
+  font-weight: 550;
+  color: white;
+  cursor: pointer;
+}
+
+.rightmost:hover {
+  border: 1px solid #c48b36;
+  background-color: white;
+  color: black;
+}
+
+
+
+.belowsticky {
+  background-color: #1F2937;
+  /*display: flex; will still use later to flex and wrap the divs*/
+  /*flex-wrap: wrap  ..notes up*/ 
+}
+
+
+.bottomboth {
+ display: flex;
+ border: 5px solid #ffdead;
+ margin-top: 50px;   /*spaces this div form the divnavleftright -- navleftright is updated to be sticky and top*/
+ margin-bottom: 50px;
+ padding: 0px;
+ align-items: center;
+ justify-content: center;
+ gap: 130px /* I used here to align straingt with the top*/
+}
+
+
+
+.topleft {
+  display: flex;
+  border: 5px solid gray;
+  width: 30%;
+  height: 70%;
+  padding: 0;
+  margin: 5px
+}
+
+
+.intopleft h1 {
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #f9faf8;
+}
+
+.intopleft p {
+  font-size: 18px;
+  color: #F9FAF8 
+}
+
+
+.intopleft Button {
+   background-color: #3882F6;
+   border-radius: 5px;
+   color: #F9FAF8
+}
+
+
+.widnheight {
+    display: flex;
+    border: 5px solid green;
+    width: 30%;
+    height: 200px;
+    margin: 5px
+}
+    
+.imagerite {                
+  border: 5px solid gray;
+  display: flex;
+  width: 50%;
+}
+
+
+.imagerite img {
+  height: auto;
+  max-width: 100%;
+}
+
+
+.middle {
+  background-color: white;
+  border: 5px solid purple;
+  display: flex; 
+  flex-direction: column;
+  
+}
+
+.middletop {
+ border: 5px solid red;
+ margin-top: 2px;
+ padding: 0;
+ justify-content: center; 
+ align-items: center; 
+ display: flex;
+ overflow: hidden;
+}
+
+.middletop > p {
+  color: #1f2937;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center; /*makes in center even on smaller screens*/
+}
+
+.middlebuttons {
+  border: 5px solid green;
+  /*margin-top: 5px;*/
+  margin-bottom: 15px;
+  padding: 10px; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  /*gap: 2px; */
+}
+
+
+.emtydi1, .emtydi2, .emtydi3 {
+  border: 2px solid pink; 
+  width: 200px;
+  display: flex;
+  flex-direction: column; /*used to make the 2 divs in it sit on top eachother*/
+  align-items: center;
+  justify-content: center;
+  margin: 5px; /* used here to move the boxes close to eachother. */
+  padding: 5px; 
+}
+
+.inemty1, .inemty2, .inemty3, .par1, .par2, .par3 {
+   /*width: 70%; can use if not filling the whole box*/
+   align-self: stretch;
+   border: 5px solid blue;
+   border-radius: 15px;
+}
+
+.inemty1, .inemty2, .inemty3 {
+   height: 70%;
+}
+
+.inemty1, .inemty2, .inemty3, .par1, .par2, .par3 > p {
+  /*margin-top: 1px; leaves some space at bottom for other div paragragh*/
+   font-size: 16px;
+   color: #1F2937;
+}
+
+.par1, .par2, .par3 > p {
+   text-align: right;
+}
+
+
+
+.aftermiddle {
+   display: flex;
+   flex-direction: column;
+   background-color: #E5E7EB;
+   border: 5px solid hotpink;
+   margin-top: 2px;
+   justify-content: center;
+   align-items: center;
+   /*gap: 5px; can be used to space the top and bottom div*/ 
+   
+}
+
+.quotesect, .quotesect2 {
+   width: 50%;
+} 
+
+.quotesect {
+   border: 5px solid green;
+   margin-top: 50px; /* top spacing inside the pink div*/
+}
+
+.quotesect > p, .quotesect2 > p {
+   font-size: 36px;
+   color: #1F2937;
+   font-style: italic;
+}
+
+.quotesect > p {
+    margin-top: 1px; /*leaves some space at bottom for other div paragragh*/
+}
+
+.quotesect2 {
+   border: 5px solid blue; 
+   margin-bottom: 50px; /* bottom spacing inside pink div*/
+} 
+
+
+.quotesect2 > p {
+   margin: 1px; /*margin of text inside at top and bottom*/
+   text-align: right;
+}
+
+
+.lastone {
+   display: flex;
+   border: 5px solid purple; 
+   justify-content: center;
+   align-items: center;
+}
+
+.lastcon {
+    display: flex;
+    width: 50%;
+    background-color: blue;
+    border: 5px solid green;
+    border-radius: 8px;
+    justify-content: space-around;
+    align-items: center;  /* It centers the sign-up button that was up */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.conla12 {
+     display: flex;
+     flex-direction: column;
+     border: 5px solid hotpink;    
+}
+
+.last1, .last1a {
+     border: 2px solid white; 
+     color: white; 
+     text-wrap: wrap;   /*wrap is used, balance can also be used */
+}
+
+
+.last2 > button {
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: blue;
+    font-size: 16px;
+    color: white;
+}
+
+.footer {
+   display: flex;
+   border: 5px solid green; 
+   background-color: #1f2937;
+   color: white;
+   justify-content: center;
+   align-items: center;
+}
