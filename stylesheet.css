@@ -105,37 +105,40 @@
 
 
 .belowsticky {
-  background-color: #1F2937;
+  /* background-color: #1F2937; */
   /*display: flex; will still use later to flex and wrap the divs*/
   /*flex-wrap: wrap  ..notes up*/ 
+  background: url("https://images.pexels.com/photos/13141583/pexels-photo-13141583.jpeg") no-repeat center center;
+  background-size: cover;
+  height: 500px;
 }
 
 
 .bottomboth {
  display: flex;
  border: 5px solid #ffdead;
- margin-top: 50px;   /*spaces this div form the divnavleftright -- navleftright is updated to be sticky and top*/
- margin-bottom: 50px;
  padding: 0px;
  align-items: center;
  justify-content: center;
- gap: 130px /* I used here to align straingt with the top*/
+ gap: 5px; /* I used here to align straingt with the top*/
+ height: 100%;
 }
 
 
 
 .topleft {
   display: flex;
-  border: 5px solid gray;
+  border: 5px solid pink;
   width: 30%;
   height: 70%;
   padding: 0;
-  margin: 5px
+  margin-left: 100px;
+  
 }
 
 
 .intopleft h1 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 48px;
   color: #f9faf8;
 }
@@ -147,24 +150,30 @@
 
 
 .intopleft Button {
-   background-color: #3882F6;
+   background-color: #db880b;
    border-radius: 5px;
-   color: #F9FAF8
+   color: #F9FAF8;
+   font-weight: bold;
+   font-size: medium;
+   padding: 10px 10px;
+   cursor: pointer;
+   height: 45px;
+   
 }
 
 
 .widnheight {
     display: flex;
     border: 5px solid green;
-    width: 30%;
-    height: 200px;
-    margin: 5px
+    width: 60%;
+    height: 100%;
+    margin: 5px;
 }
     
 .imagerite {                
   border: 5px solid gray;
   display: flex;
-  width: 50%;
+  width: 100%;
 }
 
 
@@ -172,6 +181,7 @@
   height: auto;
   max-width: 100%;
 }
+
 
 
 .middle {
@@ -190,14 +200,41 @@
  align-items: center; 
  display: flex;
  overflow: hidden;
+ flex-direction: column;
+}
+#heading {
+  width: 50%;
 }
 
-.middletop > p {
-  color: #1f2937;
-  font-weight: bold;
+#heading > h1 {
+  color: rgb(87, 79, 79);
   font-size: 36px;
   text-align: center; /*makes in center even on smaller screens*/
 }
+
+#heading > p {
+  color: rgb(59, 51, 51);
+  font-size: 16px;
+  text-align: center; /*makes in center even on smaller screens*/
+}
+
+.scrollcontainer {
+  display: flex;
+  /*flex: 1; */
+  height: 200px;
+  width: 100%;
+  justify-content: center; 
+  align-items: center; 
+  gap: 5px;
+}
+.box {
+  border: 1px solid black;
+  padding: 10px;
+  height: 150px;
+  width: 20%;
+}
+
+ 
 
 .middlebuttons {
   border: 5px solid green;
