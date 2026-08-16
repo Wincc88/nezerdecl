@@ -220,19 +220,89 @@
 
 .scrollcontainer {
   display: flex;
+  border: 5px solid blue;
   /*flex: 1; */
-  height: 200px;
+  height: 45vh;
   width: 100%;
   justify-content: center; 
   align-items: center; 
+ 
+}
+
+.holdboxes {
+  display: flex;
+  border: 2px solid yellow;
+  height: 40vh;
+  width: 50%;
+  justify-content: center; 
+  align-items: center; 
   gap: 5px;
+   /* overflow-x: auto;  wont show the button if they are used
+      overflow: hidden; */
+  position: relative;
+  
 }
-.box {
-  border: 1px solid black;
+
+
+.holdbuttons {
+  border: 1px solid gray;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.holdbuttons:hover {
+  background:  #d6b98b;
+  border-color:  #db880b;
+  scale: 1.05;
+}
+
+.holdbuttons:active {
+  scale: 0.95;
+}
+
+#prevBtn {
+  position: absolute;
+  left: -15px;
+}
+
+#nextBtn {
+  position: absolute;
+  right: -15px;
+}
+
+
+#boxone {
+  display: flex; /* each div will take up space/full vw*/
+  border: 3px dashed black;
   padding: 10px;
-  height: 150px;
-  width: 20%;
+  height: 38vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
 }
+
+#boxtwo, #boxthree, #boxfour {
+  display: none;
+  border: 3px dashed black;
+  padding: 10px;
+  height: 38vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+}
+#boxtwo {
+  background-color: aqua;
+}
+#boxthree {
+  background-color: yellow;
+}
+#boxfour {
+  background-color: red;
+}
+
 
  
 
