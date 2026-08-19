@@ -48,7 +48,7 @@
 
 
 
-.navtopright #unwholelist {
+.navtopright > #unwholelist {
   list-style-type: none;
   display: flex;
   gap: 10px          /*creates margin between the links*/
@@ -73,6 +73,7 @@
   background-color: white;
   border: none;
 }
+
 #insideservice {
   display: none;
 }
@@ -85,6 +86,45 @@
   list-style-type: none;
   margin: 0;
 }
+
+#demoLucid {
+  background-color: none;
+  
+}
+
+#dropToggle {
+
+  margin-left: -15px;
+  /* background-color: red; 
+  border: 2px dashed yellow;
+  width: 22px; */
+
+}
+
+#downUp, #updown {
+  display: flex;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+
+#updown {
+  display: none;
+}
+
+#demoDemo  {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: lightgreen;
+  list-style-type: none;
+  margin-left: -80px;
+}
+
+
+
  
 
 .rightmost {
@@ -222,7 +262,7 @@
   display: flex;
   border: 5px solid blue;
   /*flex: 1; */
-  height: 45vh;
+  height: 65vh;
   width: 100%;
   justify-content: center; 
   align-items: center; 
@@ -232,14 +272,15 @@
 .holdboxes {
   display: flex;
   border: 2px solid yellow;
-  height: 40vh;
-  width: 50%;
+  height: 60vh;
+  width: 85%;
   justify-content: center; 
   align-items: center; 
   gap: 5px;
    /* overflow-x: auto;  wont show the button if they are used
       overflow: hidden; */
   position: relative;
+  border-radius: 20px;
   
 }
 
@@ -261,25 +302,32 @@
   scale: 0.95;
 }
 
-#prevBtn {
+#prevBtn, #nextBtn {
   position: absolute;
+  cursor: pointer;
+}
+
+#prevBtn {
   left: -15px;
 }
 
 #nextBtn {
-  position: absolute;
   right: -15px;
 }
 
+.box {
+  margin-bottom: 20px;
+}
 
 #boxone {
   display: flex; /* each div will take up space/full vw*/
   border: 3px dashed black;
   padding: 10px;
-  height: 38vh;
+  height: 55vh;
   width: 100%;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
   
 }
 
@@ -287,10 +335,11 @@
   display: none;
   border: 3px dashed black;
   padding: 10px;
-  height: 38vh;
+  height: 55vh;
   width: 100%;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
   
 }
 #boxtwo {
@@ -303,8 +352,23 @@
   background-color: red;
 }
 
+.allradios {
+  position: absolute;
+  bottom: 1px;
+  border-radius: 15px;
+  border: 1px solid gray;
+  background-color: rgb(204, 202, 202);
+  padding: 2px;
+  display: flex;
+  gap: 6px;
+}
 
- 
+input[type="radio"] {
+  margin: 1px;
+  cursor: pointer;
+  accent-color: red;
+  transform: scale(1.2);
+}
 
 .middlebuttons {
   border: 5px solid green;
@@ -315,40 +379,95 @@
   align-items: center;
   justify-content: center;
   /*gap: 2px; */
+  height: 115vh;
+  
 }
 
 
-.emtydi1, .emtydi2, .emtydi3 {
+.emtyOne, .emtyTwo {
   border: 2px solid pink; 
-  width: 200px;
+  width: 40vw;
+  height: 100%;
+  flex: 0 0 40vw;
+  min-width: 0;
+  min-height: 0;
   display: flex;
   flex-direction: column; /*used to make the 2 divs in it sit on top eachother*/
   align-items: center;
   justify-content: center;
-  margin: 5px; /* used here to move the boxes close to eachother. */
   padding: 5px; 
+  margin-left: 20px;
+  margin-top: 1px;
+  gap: 10px;
+  overflow: auto;
 }
 
-.inemty1, .inemty2, .inemty3, .par1, .par2, .par3 {
-   /*width: 70%; can use if not filling the whole box*/
+.inEmtyTwo {
+  background: url("https://research.com/resized/uploads/1747068533_0_3cf91dcb7b.webp?format=large") no-repeat center center;
+  background-size: cover;
+  height: 67vh;
+  border-radius: 100px;
+}
+
+
+  
+.inEmtyOne, .inEmtyTwo, .parOne, .parTwo {
    align-self: stretch;
    border: 5px solid blue;
    border-radius: 15px;
+   text-align: left;
+}
+ #inem, #laterinem {
+   font-size: 20px;
+   color: rgb(103, 97, 97);
+}
+.inEmtyOne  h1, .parOne h1 {
+  font-size: 28px;
+  color: rgb(110, 99, 99);
 }
 
-.inemty1, .inemty2, .inemty3 {
-   height: 70%;
+#topp, #laterp {
+   font-size: 20px;
+   color:  rgb(103, 97, 97);
+}
+.parTwo  {
+  font-size: 20px;
+  gap: 10px;
+  display: flex;
 }
 
-.inemty1, .inemty2, .inemty3, .par1, .par2, .par3 > p {
-  /*margin-top: 1px; leaves some space at bottom for other div paragragh*/
-   font-size: 16px;
-   color: #1F2937;
+.leftParTwo {
+  border: 8px solid yellow;
+  width: 50%;
+
 }
 
-.par1, .par2, .par3 > p {
-   text-align: right;
+.rightParTwo {
+  border: 5px solid red;
+  width: 50%;
 }
+
+.all {
+  
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: rgb(110, 99, 99);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+.all:hover {
+  border: 1px dashed blue;
+}
+
+.allIcon {
+  display: flex;
+  flex-shrink: 0;
+}
+
 
 
 
